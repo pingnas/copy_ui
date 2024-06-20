@@ -1,3 +1,3 @@
 library ui_tooltip;
 
-export './src/tolyui_feedback.dart';
+// export './src/tolyui_feedback.dart';

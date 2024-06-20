@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_tooltip/ui_tooltip.dart';
+import 'package:ui_popover/ui_popover.dart';
 
 void main() {
   runApp(const MyApp());
