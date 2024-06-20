@@ -104,15 +104,14 @@ class PopoverDemo4 extends StatelessWidget {
     String info = placement.toString().split('.')[1];
     String buttonText = _nameMap[placement]!;
     return Center(
-      child: TolyPopover(
-        maxWidth: 200,
+      child: BPopover(
         placement: placement,
         gap: 12,
         overlay: _DisplayPanel(
           title: info,
         ),
         builder: (_, ctrl, __) => ElevatedButton(
-          onPressed: ctrl.open,
+          onPressed: () => ctrl.open(),
           child: Text(buttonText),
         ),
       ),

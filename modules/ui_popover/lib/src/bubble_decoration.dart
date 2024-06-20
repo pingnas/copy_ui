@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import 'tooltip_placement.dart';
 
 class BubbleMeta {
+  /// 箭头高 `8`
   final double spineHeight;
+
+  /// 箭头宽 `70`
   final double angle;
 
   const BubbleMeta({this.spineHeight = 8, this.angle = 70});

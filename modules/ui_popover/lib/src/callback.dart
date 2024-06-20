@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'bubble_decoration.dart';
-import 'index.dart';
+import 'popover.dart';
 import 'tooltip_placement.dart';
 
-typedef TolyPopoverChildBuilder = Widget Function(
+typedef PopoverChildBuilder = Widget Function(
   BuildContext context,
   PopoverController controller,
   Widget? child,
@@ -50,14 +50,20 @@ class DecorationConfig {
   final PaintingStyle style;
   final Color backgroundColor;
   final Color? textColor;
-  final bool isBubble;
-  final Radius radius;
   final List<BoxShadow>? shadows;
+
+  /// 最大区别大概就是 带小箭头 默认`true`
+  final bool isBubble;
+
+  /// 内容区域的弧度，默认`4`
+  final Radius radius;
+
+  /// 控制箭头，
   final BubbleMeta bubbleMeta;
 
   const DecorationConfig({
     this.style = PaintingStyle.fill,
-    this.backgroundColor= const Color(0xff303133),
+    this.backgroundColor = const Color(0xff303133),
     this.textColor,
     this.shadows,
     this.radius = const Radius.circular(4),
